@@ -1,17 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const path = require('path'); // Import module 'path'
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Gunakan port yang diberikan oleh lingkungan atau 3000
 
-// Middleware untuk mengizinkan akses ke file CSS
-app.use(express.static('public'));
-
+// Middleware untuk mengizinkan akses ke file statis seperti CSS, JS, dan gambar
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.post('/submit', (req, res) => {
