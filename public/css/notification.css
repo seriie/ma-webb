@@ -1,0 +1,46 @@
+.notification {
+    width: 100%;
+    top: -10px;
+    position: fixed;
+    z-index: 100000;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: none;
+    visibility: hidden;
+}
+
+/* .notification.active {
+    backdrop-filter: blur(20px);
+    visibility: visible;
+} */
+
+.notification .notifBox {
+    visibility: visible;
+    max-width: 400px;
+    border-radius: 5px;
+    height: 120px;
+    background-color: rgb(168, 177, 255);
+    margin: 0 auto;
+    color: blue;
+    justify-content: center;
+    transform: translateY(-250px);
+    text-align: center;
+}
+
+.notifBox.active {
+    transform: translateY(50px);
+}
+
+.notifButton {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.notifButton .yesNotifBtn, .notifButton .noNotifBtn {
+    background-color: blue;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

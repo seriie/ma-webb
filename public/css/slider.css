@@ -1,0 +1,78 @@
+* {
+    transition: .4s;
+}
+
+.slideRadio {
+    display: flex;
+    margin-top: 15px;
+}
+
+header .slideRadio .PLight {
+    opacity: 0;
+    color: #00000000;
+    position: relative;
+    position: absolute;
+    margin: -2px 0 0 -63px;
+}
+
+header .PDark {
+    width: 50px;
+    text-shadow: 2px 0 3px black;
+    color: black;
+    position: relative;
+    position: absolute;
+    margin: -2px 0 0 55px;
+    transition: color .4s;
+}
+
+.switch {
+    display: flex;
+    /* position: relative; */
+    /* position: fixed; */
+    position: absolute;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    float: right;
+}
+
+.slider {
+    border: 2px solid rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+    /* position: relative; */
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 10px 3px rgb(0, 37, 31);
+}
+
+.slider::before {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #000000;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider::before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}

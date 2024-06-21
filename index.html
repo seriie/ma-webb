@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" id="Porch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/scrollToTopBtn.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/slider-img.css">
+    <link rel="stylesheet" href="css/sidenavslider.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/showProject.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.4EnD1Qk1PdvPePPhDJxKCgAAAA?pid=ImgDet&w=181&h=181&c=7" type="image/x-icon">
+    <title>Mohammad Zidane Rahadian</title>
+</head>
+<!-- <a id="downloadLink" href="output.txt" download="output.txt" style="display:none;"></a> -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- HTML -->
+<div class="loading-container" id="loadingContainer">
+    <div class="loading"></div>
+</div>
+
+<div class="main-content">
+    <span class="open-button" onclick="openNav()">&#9776; <!--Open --></span>
+    <!-- <span class="open-button" onclick="openNav()">&#9786; Open</span> -->
+    <!-- <span class="open-button" onclick="openNav()">&#9763; Open</span> -->
+    <!-- <h1>Your Main Content Goes Here</h1> -->
+</div>
+<nav class="sidenav">
+    <div class="close-button" onclick="closeNav()">&times;</div>
+    <div class="container">
+        <div class="ZeeCoder">
+            <h3 onclick="refresh();">ZeeCoder.<h3>
+        </div>
+        <ul>
+            <li><a class="a" href="#Porch">Porch</a></li>
+            <li><a class="a" id="about" href="#About">About Me</a></li>
+            <li><a class="a" href="#Portfolio">Portfolio</a></li>
+            <li><a class="a" href="#Support">Support</a></li>
+        <li><a class="a" href="#Contact">Contact</a></li>
+        </ul>
+        <div class="sidenavSlideRadio">
+            <label class="switch" title="Toogle themes">
+                <input type="checkbox" id="theme-toggle" onclick="toggleTheme()"></input>
+                <span class="sidenavSlider"></span>
+            </label>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="ZeeCoder">
+        <h3 onclick="refresh();">Zee.</h3>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="a" href="#Porch">Porch</a></li>
+            <li><a class="a b" href="#About">About Me</a></li>
+            <li><a class="a b" href="#Portfolio">Portfolio</a></li>
+            <li><a class="a b" href="#Support">Support</a></li>
+            <li><a class="a b" href="#Contact">Contact</a></li>
+        </ul>
+        <div class="slideRadio">
+            <label class="switch" title="Toogle themes">
+                <p class="PLight"><span>Light</span> <</p>
+                <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                <span class="slider"></span>
+                <p class="PDark">> <span>Dark</span></p>
+            </label>
+        </div>
+    </nav>
+</header>
+
+<!-- Notification -->
+
+<div class="notification">
+    <div class="notifBox">
+        <div class="notifText">
+            <p class="notifTxt"></p>
+        </div>
+        <div class="notifButton">
+            <div class="yesNotifBtn">Iya</div>
+            <div class="noNotifBtn">Gak</div>
+        </div>
+    </div>
+</div>
+<body>
+    <div class="main">
+        <div class="jumbotron">
+            <div class="mainHeader">
+                <div class="text anya">
+                    <h1>Anya Forger</h1>
+                    <h3>
+                       From SxF anime 
+                    </h3>
+                    <p>Create by: Zidan</p>
+                    <a href="https://wa.me/+6285156346349"><button class="bn632-hover bn26">Hubungi</button></a>
+                </div>
+                <div class="image anya" id="anya">
+                    <img class="img" title="Anya Forger" scr="" alt="" srcset="">
+                    <div class="elements">
+                        <h3>Ubah Border:</h3>
+                        <div class="slideRadioImg">
+                            <label class="switchImg" title="Toogle border">
+                                <input type="checkbox" id="toogleBorder" onclick="">
+                                <span class="sliderImg"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Show more project -->
+    <div class="showMoreProject">
+        <img class="downAngle" src="images/DownAngle.png" alt="">
+        <div class="container">
+            <div class="toDoList">
+                <a href="https://seriie.github.io/ToDoList"><img src="images/TodoList.png" alt="">
+                    <div class="text">
+                        <h1>To-Do List</h1>
+                        <p>Simple To-Do List website</p>
+                    </div>
+                </a>
+            </div>
+            <div class="teslaWebClone">
+                <a href="https://seriie.github.io/TeslaWebClone"><img src="images/TeslaWebClone.png" alt="">
+                    <div class="text">
+                        <h1>Tesla Web Clone</h1>
+                        <p>Cloning Official Tesla web</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <div class="banner2">
+        <div id="About" class="about">
+            <div class="teks">
+                <h3>TENTANG SAYA</h3>
+                <h1>Saya masih pemula bukan orang pro</h1>
+                <p>Sebagai programmer pemula, saya pantas mengakui kalau saya bukan yang profesional.</p>
+            </div>
+        </div>
+        <div id="connect" class="connect">
+            <div class="teks">
+                <h2>Mari terhubung</h2>
+                <p>Terhubung kapan saja dan dimana saja dan pastinya pada media sosial apa saja</p>
+                <div class="media">
+                    <a title="Instagram" class="instagram" href="https://instagram.com/bukanzeee/"><img src="images/Instagram.png" alt=""></a>
+                    <a title="GitHub" class="github" href="https://github.com//"><img src="images/GitHub.png" alt=""></a>
+                    <a title="Whatsapp" class="whatsapp" href="https://wa.me/+6285156346349/"><img src="images/Whatsapp.png" alt=""></a>
+                    <a title="Tiktok" class="tiktok" href="https://tiktok.com/@"><img src="images/Tiktok.png" alt=""></a>
+                    <a title="facebook" class="Facebook" href="https://facebook.com/"><img src="images/Facebook.png" alt=""></a>
+                </div>
+            </div>
+            <div class="logo"></div>
+        </div>
+    </div>
+    <span>
+        <hr id="Portfolio">
+    </span>
+    <div class="project">
+            <h1 class="title">Project terbaru</h1>
+            <div class="project1">
+                <a href=""><img src="images/MSProject.png" alt="">
+                    <div class="text">
+                        <h1>Microsoft Web Clone</h1>
+                        <p>Cloning official microsoft web without JS and 80% success clone.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project2">
+                <a href=""><img src="images/LoginPage.png" alt="">
+                    <div class="text">
+                        <h1>Simple Registration Page</h1>
+                        <p>Making registration page using HTML and CSS.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project3">
+                <a href=""><img src="images/AppleWeb.png" alt="">
+                    <div class="text">
+                        <h1>Apple Web Clone</h1>
+                        <p>Cloning Official apple web without JS(almost 100% success).</p>
+                    </div>
+                </a>
+            </div>
+    </div>
+    <div class="client" id="Support">
+        <h1>Supported By</h1>
+        <p>Nggak sesuai sama gambar yah, ini cuma tambahan aja biar ga kosong</p>
+        <div class="logo">
+            <img src="images/letrisLogo.png" alt="">
+            <img src="images/Vscode.png" alt="">
+            <img src="images/letkesLogo.png" alt="">
+        </div>
+    </div>
+
+    
+    
+    <div class="contact">
+        <hr id="Contact">
+        <div class="text">
+            <h1>Hubungi</h1>
+            <p>Hubungi kapan saja, kalo lagi butuh doang juga gapapa</p>
+        </div>
+        <div class="form">
+            <form action="/submit" method="post">
+                <label for="Name">Nama</label><br>
+                <input type="text" name="Name" id="Name" required><br> <!-- Tambahkan name="Name" -->
+                <label for="Email">Email</label><br>
+                <input type="email" name="Email" id="Email" required><br> <!-- Tambahkan name="Email" -->
+                <label for="Massage">Pesan</label><br>
+                <textarea name="Text" id="Text" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Kirim" onclick="showload()">
+            </form>            
+        </div>
+    </div>
+
+    <!-- WhatsApp SVG Logo -->
+    <!-- <svg width="250" height="52" xmlns="http://www.w3.org/2000/svg"><path class="resume-logo" d="M37.7 31.2c-.6-.4-3.8-2-4.4-2.1-.6-.2-1-.4-1.4.3l-2 2.5c-.4.4-.8.5-1.5.2-.6-.3-2.7-1-5.1-3.2-2-1.7-3.2-3.8-3.6-4.5-.4-.6 0-1 .3-1.3l1-1.1.6-1.1c.2-.4 0-.8 0-1.1l-2-4.8c-.6-1.3-1.1-1-1.5-1.1h-1.2c-.5 0-1.2.1-1.8.8-.5.6-2.2 2.2-2.2 5.3 0 3.2 2.3 6.3 2.6 6.7.3.4 4.6 7 11 9.7l3.7 1.4c1.5.5 3 .4 4 .2 1.3-.1 3.9-1.5 4.4-3 .5-1.5.5-2.8.4-3-.2-.4-.6-.5-1.3-.8M26 47.2c-3.9 0-7.6-1-11-3l-.7-.4-8.1 2L8.4 38l-.6-.8A21.4 21.4 0 0126 4.4a21.3 21.3 0 0121.4 21.4c0 11.8-9.6 21.4-21.4 21.4M44.2 7.6a25.8 25.8 0 00-40.6 31L0 52l13.7-3.6A25.8 25.8 0 0044.3 7.5" fill="currentColor"></path></svg> -->
+
+
+
+    <div class="goToTop" id="scrollToTopContainer">
+        <a onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><img src="images/Arrow.png" alt=""></a>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Just a developer</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: mohammadzidane058@gmail.com</p>
+                <p>Phone: +6285156346349</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com/" >Facebook</a>
+                <a href="https://github.com/" >GitHub</a>
+                <a href="https://instagram.com/" >Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 <span class="ZeeCoder">ZeeCoder.</span> All Rights Reserved.<br><a href="privacy.html" class="privacy">Privacy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

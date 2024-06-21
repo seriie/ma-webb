@@ -1,0 +1,22 @@
+#scrollToTopBtn img {
+    border-radius: 50%;
+    filter: brightness(10000000);
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    background-color: #000000;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+#scrollToTopBtn img:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(0, 255, 179);
+}

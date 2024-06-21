@@ -1,0 +1,298 @@
+@media only screen and (max-width: 1200px) {
+    .PDark, .PLight {
+        opacity: 0;
+    }
+
+    .dark-mode .slideRadio .PLight {
+        opacity: 0;
+    }
+
+    .main .jumbotron .mainHeader .image img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .bn632-hover {
+        width: 145px;
+        height: 50px;
+        font-size: 15px;
+    }
+    
+    .project .h1 {
+        /* margin-top: -50px; */
+        font-size: 30px;
+    }
+
+    .client h1 {
+        font-size: 30px;
+    }
+    
+    .client p {
+        font-size: 15px;
+    }
+
+    .client .logo img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .banner2 {
+        text-align: center;
+        display: inline-block;
+    }
+
+    .main .jumbotron .mainHeader .image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main .jumbotron .mainHeader .image h3 {
+        font-size: 18px;
+    }
+
+    .bn632-hover {
+        width: 135px;
+        height: 45px;
+    }
+
+    .project .h1 h1 {
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .project .text h1 {
+        display: inline-block;
+        font-size: 20px;
+    }
+    
+    .project .text p {
+        font-size: 15px;
+    }
+    
+    .project1:hover , .project2:hover, .project3:hover {
+        border: none;
+    }
+    
+    .project1 img, .project2 img, .project3  img {
+        width: 100%;
+        /* height: 500px; */
+    }
+}
+
+@media only screen and (max-width:880px) {
+    header nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:890px) {
+    header {
+        display: none;
+    }
+
+    .main .jumbotron .mainHeader .image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main .jumbotron .mainHeader .text, .main .jumbotron .mainHeader .image {
+        margin: 0 auto;
+    }
+
+    .sidenav {
+        display: flex;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.705);
+        backdrop-filter: blur(5px);
+        z-index: 10;
+        height: 50%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.4s;
+        padding-top: 20px;
+        color: rgb(255, 255, 255);
+    }
+
+    .sidenav .ZeeCoder {
+        margin: -10px 0 -10px 90px;
+    }
+
+    .sidenav .ZeeCoder h3 {
+        cursor: pointer;
+        color: rgb(0, 255, 98);
+    }
+
+    .sidenav ul {
+        display: block;
+        z-index: 100;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .sidenav li {
+        margin-top: -5px;
+        padding: 5px 10px 5px 20px;
+    }
+    
+    .sidenav ul li a {
+        margin: 0 0 0 70px;
+        padding: 8px 20px;
+        text-decoration: none;
+        font-size: 12px;
+        color: rgb(0, 0, 0);
+    }
+
+    .sidenav ul li a:hover {
+        color: rgb(11, 204, 204);
+    }
+
+    .sidenav .sidenavSlideRadio {
+        margin: -10px 80px 0 0;
+    }
+
+    .close-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+    .open-button {
+        opacity: 1;
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main .jumbotron .mainHeader .image h3 {
+        font-size: 15px;
+    }
+
+    .bn632-hover {
+        width: 130px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .banner2 .about .teks h1 {
+        font-size: 25px;
+    }
+
+    .banner2 .about .teks h3, .banner2 .about .teks p {
+        font-size: 15px;
+    }
+
+    .banner2 h2, .banner2 .connect .teks p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .main .jumbotron .mainHeader .text {
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    /* .main .jumbotron .mainHeader .text {
+        font-size: 16px;
+        padding: 10px;
+    } */
+    
+    .main .jumbotron .mainHeader .image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .main .jumbotron .mainHeader .image h3 {
+        font-size: 10px;
+    }
+
+    .main .jumbotron .mainHeader .image .elements {
+        text-align: center;
+    }
+    
+    .main .jumbotron .mainHeader .image .elements .slideRadioImg {
+        margin-left: 39%;
+    }
+    
+    .bn632-hover {
+        width: 85px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    .banner2 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .banner2 .about .teks h3 {
+        font-size: 15px;
+    }
+
+    .banner2 .about .teks p {
+        font-size: 12px;
+    }
+
+    .banner2 .connect .teks h2 {
+        font-size: 18px;
+    }
+
+    .banner2 .connect .teks p {
+        font-size: 12px;
+    }
+
+    .project .project1 img, .project .project2 img, .project .project3 img {
+        height: 200px;
+    }
+
+    .project1:hover, .project2:hover, .project3:hover {
+        box-shadow: 0 8px 10px 0px rgb(0, 0, 0);
+    }
+
+    .dark-mode .project1:hover, .dark-mode .project2:hover, .dark-mode .project3:hover {
+        box-shadow: 0 8px 10px 0px cyan;
+    }
+
+    .project .title {
+        font-size: 30px;
+    }
+
+    .project .text p {
+        font-size: 14px;
+    }
+
+    .client h1 {
+        font-size: 25px;
+    }
+
+    .client p {
+        font-size: 12px;
+    }
+
+    .client .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-container {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

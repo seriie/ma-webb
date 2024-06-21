@@ -1,0 +1,239 @@
+.dark-mode * {
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.dark-mode {
+    background-color: rgb(13, 23, 28);
+    /* background: linear-gradient(225deg, rgb(3, 20, 26), rgb(1, 17, 7), rgb(1, 14, 6), rgb(0, 0, 0)); */
+    color: #fff;
+}
+
+.dark-mode header {
+    box-shadow: 0 0 10px 2px white;
+}
+
+.dark-mode nav ul li .a {
+    color: #ffffff;
+    transition: color .4s;
+}
+
+.dark-mode nav ul li .a:hover {
+    color: rgb(0, 255, 0);
+}
+
+.dark-mode .toogleBtn .theme-toogle {
+    background-color: white;
+}
+
+.dark-mode .teks {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .text {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .ZDev h3 {
+    color: white;
+}
+
+.dark-mode .slideRadio .PLight {
+    display: block;
+    position: relative;
+    position: absolute;
+    opacity: 1;
+    text-shadow: 0 0 3px white;
+    color: white;
+    transition: transform .4s;
+    transition: color .4s;
+}
+
+.dark-mode .slideRadio .PDark {
+    opacity: 0;
+    color: #33333300;
+    display: none;
+}
+
+.dark-mode .sidenav {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.dark-mode .sidenavSlideRadio .slider {
+    box-shadow: 0 0 10px 3px white;
+    background-color: black;
+    border: 2px solid transparent;
+}
+
+.dark-mode .sidenavSlideRadio .slider::before {
+    background-color: #fff;
+}
+
+.dark-mode .main .jumbotron .mainHeader .text {
+    color: white;
+}
+  
+.dark-mode .bn632-hover.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #0ba360,
+      #3cba92,
+      #30dd8a,
+      #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.dark-mode .main .jumbotron .mainHeader .image h3 {
+    color: #fff;
+}
+
+.dark-mode .slider {
+    box-shadow: 0 0 10px 3px white;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #000000;
+}
+
+.dark-mode .slider::before {
+    background-color: rgb(255, 255, 255);
+}
+
+.dark-mode .banner2 .about .teks h3 {
+    color: rgb(0, 255, 179);
+}
+
+.dark-mode .media {
+    filter: brightness(5);
+}
+
+.dark-mode .banner2 .connect .media img:hover {
+    background-color: rgb(0, 34, 23);
+}
+
+.dark-mode .project {
+    background-color: #00000000;
+    /* background: linear-gradient(90deg, rgb(3, 20, 26), rgb(1, 17, 7), rgb(1, 14, 6), rgb(0, 0, 0)); */
+}
+
+.dark-mode .showcase {
+    width: 650px;
+    height: 100px;
+    position: relative;
+    position: absolute;
+    margin-top: -100px;
+}
+
+.dark-mode .showcase video {
+    width: 600px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.dark-mode .project .title {
+    background-color: rgb(13, 23, 28);
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+}
+
+.dark-mode #scrollToTopBtn img {
+    filter: brightness(1);
+    background-color: white;
+}
+
+.dark-mode #scrollToTopBtn img:hover {
+    box-shadow: 0 0 10px 2px cyan;
+}
+
+.dark-mode .project1, .dark-mode .project2, .dark-mode .project3 {
+    background-color: rgb(0, 94, 66);
+}
+
+.dark-mode .project1:hover, .dark-mode .project2:hover, .dark-mode .project3:hover {
+    box-shadow: 8px 8px 10px 0px white;
+}
+
+.dark-mode .client {
+    background: linear-gradient(225deg, rgb(13, 23, 28), rgb(26, 46, 56), rgb(13, 23, 28),rgb(26, 46, 56));
+}
+
+.dark-mode .client:hover {
+    backdrop-filter: blur(100px);
+}
+
+.dark-mode .form label {
+    color: rgb(0, 218, 145);
+}
+
+.dark-mode .form input, .dark-mode .form textarea {
+    border: 2px solid rgb(0, 218, 145);
+    background-color: #fff;
+}
+
+.dark-mode .form input[type="submit"] {
+    background-color: rgb(0, 218, 145);
+}
+
+.dark-mode .form input[type="submit"]:hover {
+    background-color: rgb(0, 190, 127);
+}
+
+.dark-mode .form input[type="submit"]:active {
+    background-color: rgb(0, 175, 117);
+}
+
+body.dark-mode-scrolled nav ul li .a {
+    color: black;
+}
+
+.dark-mode .open-button {
+    color: white;
+}
+
+.dark-mode .close-button {
+    color: white;
+}
+
+.dark-mode .ZeeCoder h3 {
+    color: rgb(0, 255, 98);
+    /* color: white; */
+}
+
+.dark-mode .sliderImg {
+    border: 2px solid white;
+    background-color: #00000000;
+}
+
+.dark-mode .sliderImg::before {
+    background-color: #fff;
+}
+
+/* Notifikasi */
+
+.dark-mode .notification .notifBox {
+    background-color: rgb(183, 255, 183);
+    color: green;
+}
+
+.dark-mode .notifButton .yesNotifBtn,.dark-mode .notifButton .noNotifBtn {
+    background-color: green;
+}
+
+.dark-mode .showMoreProject .container .toDoList, .dark-mode .showMoreProject .container .teslaWebClone {
+    background-color: rgb(0, 94, 66);
+    border: 1px solid white;
+}
+
+.dark-mode .showMoreProject .text {
+    color: white;
+}
+
+.dark-mode .showMoreProject .downAngle {
+    filter: brightness(10000);
+}

@@ -1,0 +1,406 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.sidenav {
+    display: none;
+}
+
+body {
+    background-color: white;
+    margin: 0 10px;
+    padding: 0;
+}
+#Contact {
+    margin-bottom: 100px;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    margin-top: -25px;
+    backdrop-filter: blur(5px);
+    background-color: #33333300;
+    color: #fff;
+    box-shadow: 0 0 8px 2px rgb(13, 23, 28);
+    padding: 10px 10px 0 10px;
+}
+
+header .slideRadio .PLight {
+    display: none;
+}
+
+header .slideRadio .PDark {
+    display: block;
+}
+
+header .slideRadio .PLight span, .slideRadio .PDark span {
+    cursor: pointer;
+}
+
+.main .jumbotron .mainHeader {
+    z-index: -1;
+    margin-top: 90px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+}
+
+.main .jumbotron .mainHeader .text {
+    color: black;
+    font-size: 20px;
+}
+
+.main .jumbotron .mainHeader .image img {
+    width: 450px;
+    height: 450px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.main .jumbotron .mainHeader .image {
+    animation: slideImage 1s;
+    animation-duration: 1s;
+}
+.main .jumbotron .mainHeader .text {
+    animation: slideText 1s;
+    animation-duration: 1s;
+}
+
+@keyframes slideImage {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideText {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main .jumbotron .mainHeader .image h3 {
+    font-size: 25px;
+    color: black;
+}
+
+.main .banner {
+    cursor: pointer;
+}
+
+.banner2 .teks {
+    transition: color 1s;
+    color: black;
+}
+
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+}
+  
+.bn632-hover:hover {
+    background-position: 100% 0;
+}
+  
+.bn632-hover:focus {
+    outline: none;
+}
+  
+.bn632-hover.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+header .theme-toogle {
+    margin: -50px 20px 0 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+header div.ZeeCoder  h3 {
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: rgb(0, 255, 98);
+    float: left;
+}
+
+header nav {
+    justify-content: space-evenly;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color .4s;
+}
+
+header nav ul li .a:hover {
+    color: rgb(11, 204, 204);
+}
+
+.banner2 {
+    z-index: -1;
+    margin: 100px 0 200px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.banner2 .about {
+    transition: 1s;
+}
+
+.banner2 .connect {
+    transition: 1.5s;
+    margin-top: 48px;
+}
+
+.banner2 .teks {
+    margin: 0 58px 0 58px;
+}
+
+.banner2 .about .teks h3 {
+    color: rgb(0, 187, 187);
+    transition: .4s;
+}
+
+.project {
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
+    transition: .7s;
+}
+
+.project .title {
+    margin-top: -60px;
+    background-color: #fff;
+    font-size: 50px;
+    position: relative;
+    position: absolute;
+    color: #000;
+}
+
+.project {
+    margin: 150px 0 150px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project img {
+    border-radius: 10px 10px 0 0;
+    transition: .4s;
+    max-width: 335px;
+}
+
+.project1, .project2, .project3 {
+    display: flex;
+    margin: 100px 0 0 0;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+    border-radius: 30px;
+    background-color: #ccc;
+    max-width: 335px;
+}
+
+.project .text {
+    color: #000;
+}
+
+.project1 img, .project2 img, .project3 img {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.project .text h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project .text p {
+    font-size: 14px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+.project1:hover, .project2:hover, .project3:hover {
+    border:1px solid black;
+    border-radius: 0;
+    box-shadow: 8px 8px 10px 0px rgb(0, 0, 0);
+    transform: translateY(-20px);
+}
+
+.project img:hover {
+    border-radius: 0;
+}
+
+.client {
+    padding: 70px 0 100px 0;
+    background: linear-gradient(90deg, #ccc, #fff, #fff, #ccc);
+    transition: 1s;
+}
+
+.client h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.client p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.client .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.client .logo img {
+    cursor: pointer;
+    filter: saturate(0);
+    margin: 40px auto;
+    width: 200px;
+    height: 200px;
+    transition: .4s;
+}
+
+.client .logo img:hover {
+    filter: saturate(1);
+}
+
+.contact {
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 30px;
+}
+
+.contact .text {
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+}
+
+.form label {
+    color: rgb(0, 219, 219);
+    font-weight: bolder;
+    display: block;
+    margin: 5px 0 -20px 0;
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form textarea {
+    border: 1px solid aqua !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 0 10px 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.form input[type="email"]:focus,
+.form input[type="text"]:focus,
+.form textarea:focus {
+    border: 2px solid aqua !important;
+    /* Anda bisa menyesuaikan ketebalan border sesuai kebutuhan */
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form input[type="submit"] {
+    border: 2px solid rgb(0, 219, 219);
+    width: 101%;
+    min-width: 101%;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(0, 219, 219);
+    padding: 10px;
+    border-radius: 100px;
+    margin: auto;
+}
+
+.form input[type="submit"]:hover {
+    background-color: rgb(0, 201, 201);
+}
+
+.form input[type="submit"]:active {
+    background-color: rgb(1, 179, 179);
+}
+
+.open-button {
+    opacity: 0;
+    text-shadow: 0 0 8px 5px rgb(0, 212, 142);
+    transition: .4s;
+}
+
+.close-button {
+    color: black;
+    position: sticky;
+    transition: .4s;
+}
