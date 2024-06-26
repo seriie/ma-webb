@@ -2,7 +2,7 @@
 
 let isTabActive = true;
 let interactionDetected = false;
-let remainingTime = 200; // 20 detik
+let remainingTime = 20000; // 20 detik
 let timer;
 let notificationDismissed = false;
 
@@ -471,12 +471,6 @@ document.addEventListener("scroll", function() {
         project.style.transform = "scale(1)";
         project.style.backgroundColor = "transparent";
         project.style.borderRadius = "10px";
-        // project.style.filter = "none"
-    } else if(!position.top <= !window.innerHeight * 0.95) {
-        project.style.opacity = "0";
-        project.style.transform = "scale(0.5)";
-        project.style.borderRadius = "500px";
-        // project.style.filter = "blur(10px)"
     }
 });
 
@@ -486,8 +480,6 @@ document.addEventListener("scroll", function() {
 
     if (position.top <= window.innerHeight * 0.65) {
         client.style.opacity = "1";
-    } else if(!position.top <= !window.innerHeight * 0.65) {
-        client.style.opacity = "0";
     }
 });
 
@@ -495,12 +487,9 @@ document.addEventListener("scroll", function() {
     var about = document.querySelector('.about');
     var position = about.getBoundingClientRect();
 
-    if(position.top <= window.innerHeight * 0.65) {
+    if(position.top <= window.innerHeight * 0.35) {
         about.style.transform = "translateX(0)";
         about.style.opacity = "1";
-    } else if(!position.top <= window.innerHeight * 0.65) {
-        about.style.transform = "translateX(-300px)";
-        about.style.opacity = "0";
     }
 });
 
@@ -508,11 +497,8 @@ document.addEventListener("scroll", function() {
     var connect = document.querySelector('.connect');
     var position =  connect.getBoundingClientRect();
 
-    if(position.top <= window.innerHeight * 0.75) {
+    if(position.top <= window.innerHeight * 0.40) {
         connect.style.transform = "translateX(0)";
         connect.style.opacity = "1";
-    } else if(!position.top <= window.innerHeight * 0.75) {
-        connect.style.transform = "translateX(-300px)";
-        connect.style.opacity = "0";
     }
 });

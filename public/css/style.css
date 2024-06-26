@@ -196,11 +196,15 @@ header nav ul li .a:hover {
 
 .banner2 .about {
     transition: 1s;
+    transform: translateX(-300px);
+    opacity: 0;
 }
 
 .banner2 .connect {
     transition: 1.5s;
     margin-top: 48px;
+    transform: translateX(-300px);
+    opacity: 0;
 }
 
 .banner2 .teks {
@@ -217,6 +221,9 @@ header nav ul li .a:hover {
     /* display: flex; */
     justify-content: center;
     transition: .7s;
+    opacity: 0;
+    transform: scale(0.5);
+    borderRadius: 500px;
 }
 
 .project .title {
@@ -298,6 +305,7 @@ header nav ul li .a:hover {
     padding: 70px 0 100px 0;
     background: linear-gradient(90deg, #ccc, #fff, #fff, #ccc);
     transition: 1s;
+    opacity: 0;
 }
 
 .client h1 {
@@ -317,15 +325,16 @@ header nav ul li .a:hover {
 
 .client .logo img {
     cursor: pointer;
-    filter: saturate(0) !important;
     margin: 40px auto;
     width: 200px;
     height: 200px;
     transition: .4s;
 }
 
-.client .logo img:hover , .client .logo img.github:hover {
-    filter: saturate(1);
+.client .logo img.github {
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: inset 0 0 8px 5px black;
 }
 
 .contact {
