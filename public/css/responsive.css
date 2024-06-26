@@ -106,6 +106,7 @@
         margin: 0;
         background-color: rgba(255, 255, 255, 0.705);
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         z-index: 10;
         height: 50%;
         width: 0;
@@ -200,9 +201,14 @@
     }
 }
 
-@media only screen and (max-width: 512px) {
-    .main .jumbotron .mainHeader .text {
-        text-align: center;
+@media only screen and (max-width: 690px) {
+    .showMoreProject .container .toDoList, .showMoreProject .container .teslaWebClone {
+        width: 250px;
+        font-size: 12px;
+    }
+
+    .showMoreProject .container .toDoList img, .showMoreProject .container .teslaWebClone img {
+        width: 250px;
     }
 }
 
@@ -294,5 +300,34 @@
         text-align: center;
         align-items: center;
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .showMoreProject {
+        transition: transform 0.3s ease;
+    }
+
+    .showMoreProject img.downAngle {
+        transform: rotateZ(90deg);
+        position: absolute;
+        right: 0;
+        width: 40px;
+        margin: 0 20px 0 0;
+        z-index: 100000000000000000;
+    }
+
+    .showMoreProject img.downAngle.active {
+        transform: translateX(-100%);
+    }
+    
+    .showMoreProject img.downAngle:hover {
+        transform: translateX(-10px) rotateZ(90deg) !important;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .main .jumbotron .mainHeader .text {
+        text-align: center;
     }
 }

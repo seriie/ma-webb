@@ -2,9 +2,20 @@
 
 let isTabActive = true;
 let interactionDetected = false;
-let remainingTime = 20000; // 20 detik
+let remainingTime = 200; // 20 detik
 let timer;
 let notificationDismissed = false;
+
+// Overlay
+function showOverlay() {
+    document.getElementById('overlay').style.display = 'block';
+    document.body.classList.add('modal-open');
+}
+
+function hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+    document.body.classList.remove('modal-open');
+}
 
 // Custom alert
 
@@ -75,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const notifikasi = document.querySelector('.notification');
         notifikasi.classList.remove('active');
         notif.classList.remove('active');
+        showOverlay();
     });
     noBtn.addEventListener('click', function() {
         pauseTimer();
@@ -83,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const notifikasi = document.querySelector('.notification');
         notifikasi.classList.remove('active');
         notif.classList.remove('active');
+        hideOverlay();
     });
 });
 
@@ -92,47 +105,61 @@ startTimer(); // Mulai timer ketika halaman dimuat
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const toDoList = document.querySelector('.toDoList');
-    const teslaWebClone = document.querySelector('.teslaWebClone');
     const downAngle = document.querySelector('.downAngle');
     const showProject = document.querySelector('.showMoreProject');
+    const toDoList = document.querySelector('.toDoList');
+    const teslaWebClone = document.querySelector('.teslaWebClone');
+    
+    checkWindowSize();
 
     downAngle.addEventListener('click', function() {
-        showProject.classList.add('down')
+        showProject.classList.add('down');
+        hideOverlay();
     });
     
     toDoList.addEventListener('mouseover', function() {
         teslaWebClone.style.opacity = ".8";
-        toDoList.style.transform = "scale(1.1)"
-        teslaWebClone.style.transform = "scale(.9)"
-        // toDoList.style.boxShadow = "0 0 10px 3px black";
+        toDoList.style.transform = "scale(1.1)";
+        teslaWebClone.style.transform = "scale(.9)";
     });
+    
     toDoList.addEventListener('mouseleave', function() {
-        toDoList.style.transform = "scale(1)"
-        teslaWebClone.style.transform = "scale(1)"
+        toDoList.style.transform = "scale(1)";
+        teslaWebClone.style.transform = "scale(1)";
         teslaWebClone.style.opacity = "1";
-        // toDoList.style.boxShadow = "none";
     });
+    
     toDoList.addEventListener('click', function() {
         window.open('https://seriie.github.io/ToDoList');
     });
 
     teslaWebClone.addEventListener('mouseover', function() {
         toDoList.style.opacity = ".5";
-        teslaWebClone.style.transform = "scale(1.1)"
-        toDoList.style.transform = "scale(.9)"
-        // teslaWebClone.style.boxShadow = "0 0 10px 3px black";
+        teslaWebClone.style.transform = "scale(1.1)";
+        toDoList.style.transform = "scale(.9)";
     });
+    
     teslaWebClone.addEventListener('mouseleave', function() {
-        teslaWebClone.style.transform = "scale(1)"
-        toDoList.style.transform = "scale(1)"
+        teslaWebClone.style.transform = "scale(1)";
+        toDoList.style.transform = "scale(1)";
         toDoList.style.opacity = "1";
-        // teslaWebClone.style.boxShadow = "none";
     });
+    
     teslaWebClone.addEventListener('click', function() {
         window.open('https://seriie.github.io/TeslaWebClone');
     });
+
+    function checkWindowSize() {
+        const showProject = document.querySelector('.showMoreProject');
+        downAngle.addEventListener('click', function() {
+            if (window.innerWidth <= 520) {
+                showProject.style.transform = 'translateX(-200%)';
+            }
+        });
+    }
 });
+
+
 
 // Open nav
 
