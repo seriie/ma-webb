@@ -249,6 +249,7 @@ header nav ul li .a:hover {
     border-radius: 30px;
     background-color: #ccc;
     max-width: 335px;
+    border: 1px solid black;
 }
 
 .project .text {
@@ -289,7 +290,7 @@ header nav ul li .a:hover {
     transform: translateY(-20px);
 }
 
-.project img:hover {
+.project1:hover img, .project2:hover img, .project3:hover img {
     border-radius: 0;
 }
 
@@ -316,14 +317,14 @@ header nav ul li .a:hover {
 
 .client .logo img {
     cursor: pointer;
-    filter: saturate(0);
+    filter: saturate(0) !important;
     margin: 40px auto;
     width: 200px;
     height: 200px;
     transition: .4s;
 }
 
-.client .logo img:hover {
+.client .logo img:hover , .client .logo img.github:hover {
     filter: saturate(1);
 }
 

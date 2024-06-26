@@ -134,6 +134,10 @@
     object-fit: cover;
 }
 
+.dark-mode .project1, .dark-mode .project2, .dark-mode .project3 {
+    border: 1px solid white;
+}
+
 .dark-mode .project .title {
     background-color: rgb(13, 23, 28);
     font-size: 50px;
