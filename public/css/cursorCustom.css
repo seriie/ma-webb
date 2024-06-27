@@ -15,5 +15,5 @@
     z-index: 999999999999999999999999999999999999999999999999999; /* Pastikan elemen ini berada di atas elemen lain */
     pointer-events: none; /* Agar elemen ini tidak mengganggu event mouse */
     visibility: hidden;
-    transition: .0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001s;
+    transition: none;
 }

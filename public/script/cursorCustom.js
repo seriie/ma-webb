@@ -42,4 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor.style.backgroundColor =  colors[randomColors];
         cursor.style.boxShadow = `0 0 8px 3px ${shadows[randomShadows]}`;
     });
+
+    document.addEventListener('mouseout', function() {
+        cursor.style.visibility = "hidden";
+    });
 });
