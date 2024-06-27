@@ -374,8 +374,7 @@ header nav ul li .a:hover {
 .form input[type="email"]:focus,
 .form input[type="text"]:focus,
 .form textarea:focus {
-    border: 2px solid aqua !important;
-    /* Anda bisa menyesuaikan ketebalan border sesuai kebutuhan */
+    outline: none;
 }
 
 .form textarea {
