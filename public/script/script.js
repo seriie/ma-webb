@@ -1,4 +1,5 @@
 // Notifikasi
+window.scrollTo(0, 0);
 
 let isTabActive = true;
 let interactionDetected = false;
@@ -74,6 +75,7 @@ document.addEventListener('keydown', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
     const yesBtn = document.querySelector('.yesNotifBtn');
     const noBtn = document.querySelector('.noNotifBtn');
     const showProject = document.querySelector('.showMoreProject');
@@ -180,33 +182,62 @@ function closeNav() {
 
 // Change themes
 
+// Function to toggle theme
 function toggleTheme() {
+    window.scrollTo(0, 0);
+    const checkbox = document.getElementById('theme-toggle');
     const body = document.body;
-    body.classList.toggle('dark-mode');
-
-    // const themeStyle = document.getElementById('theme-style');
-    // const isDarkMode = body.classList.contains('dark-mode');
-
-    // Switch between dark and light mode stylesheets
-    // themeStyle.href = isDarkMode ? 'dark-style.css' : 'light-style.css';
+    const isDarkMode = body.classList.toggle('dark-mode');
+  
+    if (isDarkMode) {
+      localStorage.setItem("theme", "dark-mode");
+    } else {
+      localStorage.setItem("theme", "light-mode");
+    }
     
-    // Save theme preference to localStorage (optional)
-    // localStorage.setItem('darkMode', isDarkMode);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    var slider = document.querySelector('.slideRadioImg');
-    var img = document.querySelector('.image img');
-    var checkbox = document.getElementById('toogleBorder')
-
-    slider.addEventListener('click', function() {
-        if (checkbox.checked) {
-            img.style.borderRadius = "50%";
-        } else {
-            img.style.borderRadius = "10px";
-        }
-    });
-});
+    checkbox.checked = isDarkMode; // Update checkbox state
+  }
+  
+  // Load theme preference from localStorage on page load
+//   window.onload = function() {
+//     const checkbox = document.getElementById('theme-toggle');
+    
+//     if (localStorage.getItem("theme") === 'dark-mode' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//       document.body.classList.add('dark-mode');
+//       checkbox.checked = true; // Ensure checkbox reflects dark mode state
+//     } else {
+//       document.body.classList.remove('dark-mode');
+//       checkbox.checked = false; // Ensure checkbox reflects light mode state
+//     }
+//   }
+  
+  function changeBorder() {
+    const checkbox = document.getElementById('toggleBorder');
+    const img = document.querySelector('.image img');
+    const isBordered = img.classList.toggle('active');  // Toggle class 'active'
+  
+    if (isBordered) {
+      localStorage.setItem("border", "bordered");
+    } else {
+      localStorage.setItem("border", "notBordered");
+    }
+  
+    checkbox.checked = isBordered;
+  }
+  
+  window.onload = function() {
+    window.scrollTo(0, 0);
+    const checkbox = document.getElementById('toggleBorder');
+    const img = document.querySelector('.image img');
+  
+    if (localStorage.getItem("border") === 'bordered') {
+      img.classList.add('active');
+      checkbox.checked = true;
+    } else {
+      img.classList.remove('active');
+      checkbox.checked = false;
+    }
+  }  
 
 function slideImagOff() {
     img = document.querySelector('.image.anya');
@@ -233,18 +264,21 @@ function slideTextOnn() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     showLoading();
     slideTextOff();
     slideImagOff();
 });
 
 window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
     hideLoading();
     slideTextOnn();
     slideImagOnn();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     var images = [
         'https://encrypted-tbn0.gstatic.com/images.jpg?q=tbn:ANd9GcSeXIFrnCQUJnSEUKgew2Mox335dyb2qr3Utg&usqp=CAU',
         'https://encrypted-tbn0.gstatic.com/images.jpg?q=tbn:ANd9GcQfgygT1zjZzhVCAa2l0vD1NK8H03PDy04D-g&usqp=CAU',
@@ -354,6 +388,7 @@ function scrollToTop() {
 // });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     document.querySelectorAll('a[href^="#About"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -373,6 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     document.querySelectorAll('a[href^="#Porch"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -392,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     document.querySelectorAll('a[href^="#Portfolio"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -411,6 +448,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     document.querySelectorAll('a[href^="#Support"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -430,6 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
     document.querySelectorAll('a[href^="#Contact"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

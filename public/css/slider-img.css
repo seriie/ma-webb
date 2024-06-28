@@ -35,10 +35,6 @@
     transition: .4s;
 }
 
-.image img .clicked {
-  border-radius: 10px;
-}
-
 
 .sliderImg::before {
     border-radius: 50%;

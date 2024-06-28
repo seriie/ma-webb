@@ -66,6 +66,10 @@ header .slideRadio .PLight span, .slideRadio .PDark span {
     border-radius: 10px;
 }
 
+.main .jumbotron .mainHeader .image img.active {
+    border-radius: 50%;
+}
+
 .main .jumbotron .mainHeader .image {
     animation: slideImage 1s;
     animation-duration: 1s;
