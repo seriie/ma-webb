@@ -47,5 +47,3 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor.style.display = "none";
     });
 });
-
-// const cursor = document.querySelector(".cursorCustom");
