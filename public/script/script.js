@@ -179,37 +179,41 @@ function closeNav() {
     document.querySelector(".main-content").style.marginLeft = "0";
 }
 
-
 // Change themes
 
 // Function to toggle theme
 function toggleTheme() {
-    window.scrollTo(0, 0);
     const checkbox = document.getElementById('theme-toggle');
     const body = document.body;
     const isDarkMode = body.classList.toggle('dark-mode');
   
     if (isDarkMode) {
       localStorage.setItem("theme", "dark-mode");
+      console.log('darkmode');
     } else {
-      localStorage.setItem("theme", "light-mode");
+        localStorage.setItem("theme", "light-mode");
+        console.log('lightmode');
     }
     
-    checkbox.checked = isDarkMode; // Update checkbox state
+    let darkmodeChecked = checkbox.checked = isDarkMode;
+    console.log(darkmodeChecked);
   }
   
   // Load theme preference from localStorage on page load
-//   window.onload = function() {
-//     const checkbox = document.getElementById('theme-toggle');
+  document.addEventListener('DOMContentLoaded',function() {
+    const checkbox = document.getElementById('theme-toggle');
+    console.log('theme loaded');
     
-//     if (localStorage.getItem("theme") === 'dark-mode' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-//       document.body.classList.add('dark-mode');
-//       checkbox.checked = true; // Ensure checkbox reflects dark mode state
-//     } else {
-//       document.body.classList.remove('dark-mode');
-//       checkbox.checked = false; // Ensure checkbox reflects light mode state
-//     }
-//   }
+    if (localStorage.getItem("theme") === 'dark-mode' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.add('dark-mode');
+      checkbox.checked = true;
+      console.log('checkbox: true');
+    } else {
+        document.body.classList.remove('dark-mode');
+        checkbox.checked = false;
+        console.log('checkbox: false');
+    }
+  });
   
   function changeBorder() {
     const checkbox = document.getElementById('toggleBorder');
@@ -226,7 +230,6 @@ function toggleTheme() {
   }
   
   window.onload = function() {
-    window.scrollTo(0, 0);
     const checkbox = document.getElementById('toggleBorder');
     const img = document.querySelector('.image img');
   

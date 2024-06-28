@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cursor = document.querySelector(".cursorCustom");
-
+    
     document.body.style.cursor = 'none';
     const colors = [
         'rgba(255, 15, 15, 0.651)',    // Merah terang
@@ -34,16 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const randomShadows = Math.floor(Math.random() * shadows.length);
-
+    
     document.addEventListener('mousemove', function(event) {
         cursor.style.top = `${event.pageY}px`;
         cursor.style.left = `${event.pageX}px`;
-        cursor.style.visibility = "visible";
+        cursor.style.display = "block";
         cursor.style.backgroundColor =  colors[randomColors];
         cursor.style.boxShadow = `0 0 8px 3px ${shadows[randomShadows]}`;
     });
-
+    
     document.addEventListener('mouseout', function() {
-        cursor.style.visibility = "hidden";
+        cursor.style.display = "none";
     });
 });
+
+// const cursor = document.querySelector(".cursorCustom");
