@@ -3,18 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.body.style.cursor = 'none';
     const colors = [
-        'rgba(255, 15, 15, 0.651)',    // Merah terang
-        'rgba(15, 255, 15, 0.651)',    // Hijau terang
-        'rgba(15, 15, 255, 0.651)',    // Biru terang
-        'rgba(255, 255, 15, 0.651)',   // Kuning terang
-        'rgba(15, 255, 255, 0.651)',   // Cyan terang
-        'rgba(255, 15, 255, 0.651)',   // Magenta terang
-        'rgba(255, 165, 0, 0.651)',    // Jingga
-        'rgba(0, 128, 0, 0.651)',      // Hijau tua
-        'rgba(0, 0, 128, 0.651)',      // Biru tua
-        'rgba(128, 0, 128, 0.651)',    // Ungu
-        'rgba(128, 128, 0, 0.651)',    // Cokelat
-        'rgba(0, 128, 128, 0.651)'     // Cyan tua
+        'rgba(255, 15, 15)',    // Merah terang
+        'rgba(15, 255, 15)',    // Hijau terang
+        'rgba(15, 15, 255)',    // Biru terang
+        'rgba(255, 255, 15)',   // Kuning terang
+        'rgba(15, 255, 255)',   // Cyan terang
+        'rgba(255, 15, 255)',   // Magenta terang
+        'rgba(255, 165, 0)',    // Jingga
+        'rgba(0, 128, 0)',      // Hijau tua
+        'rgba(0, 0, 128)',      // Biru tua
+        'rgba(128, 0, 128)',    // Ungu
+        'rgba(128, 128, 0)',    // Cokelat
+        'rgba(0, 128, 128)'     // Cyan tua
     ];
 
     const randomColors = Math.floor(Math.random() * colors.length);    
