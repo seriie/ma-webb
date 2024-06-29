@@ -182,7 +182,7 @@ function closeNav() {
   function changeBorder() {
     const checkbox = document.getElementById('toggleBorder');
     const img = document.querySelector('.image img');
-    const isBordered = img.classList.toggle('active');  // Toggle class 'active'
+    const isBordered = img.classList.toggle('active');
   
     if (isBordered) {
       localStorage.setItem("border", "bordered");
