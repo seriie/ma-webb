@@ -179,58 +179,70 @@ function closeNav() {
     document.querySelector(".main-content").style.marginLeft = "0";
 }
 
-function changeBorder() {
-    const checkbox = document.getElementById('toggleBorder');
-    const  img = document.querySelector('.image.anya img');
-    const isBordered = img.classList.toggle('active');
-    if (isBordered) {
-      localStorage.setItem("border", "bordered");
-    } else {
-      localStorage.setItem("theme", "notBordered");
-    }
+// function changeBorder() {
+//     const checkbox = document.getElementById('toggleBorder');
+//     const img = document.querySelector('.image.anya img');
+//     const isBordered = img.classList.toggle('active');
+//     if (isBordered) {
+//         localStorage.setItem("border", "bordered");
+//     } else {
+//         localStorage.setItem("border", "notBordered");
+//     }
+//     checkbox.checked = isBordered;
+// }
+
+// window.onload = function() {
+//     const checkbox = document.getElementById('toggleBorder');
+//     const img = document.querySelector('.image.anya img');
     
-    checkbox.checked = isBordered;
-  }
+//     if (localStorage.getItem("border") === 'bordered') {
+//         img.classList.add('active');
+//         checkbox.checked = true;
+//     } else {
+//         img.classList.remove('active');
+//         checkbox.checked = false;
+//     }
+
+//     checkbox.addEventListener('change', changeBorder);
+// }
   
-  window.onload = function() {
+function changeBorder() {
     const checkbox = document.getElementById('toggleBorder');
     const img = document.querySelector('.image.anya img');
     
-    if (localStorage.getItem("border") === 'bordered' || (!('border' in localStorage))) {
-      img.classList.add('active');
-      checkbox.checked = true;
+    if (img) {
+        img.classList.toggle('active', checkbox.checked);
+        console.log('Border changed:', checkbox.checked);
+        if (checkbox.checked) {
+            localStorage.setItem("border", "bordered");
+        } else {
+            localStorage.setItem("border", "notBordered");
+        }
     } else {
-      img.classList.remove('active');
-      checkbox.checked = false;
+        console.log('Image element not found.');
     }
-  }
-  
-//   function changeBorder() {
-//     const checkbox = document.getElementById('toggleBorder');
-//     const img = document.querySelector('.image img');
-//     const isBordered = img.classList.toggle('active');
-  
-//     if (isBordered) {
-//       localStorage.setItem("border", "bordered");
-//     } else {
-//       localStorage.setItem("border", "notBordered");
-//     }
-  
-//     checkbox.checked = isBordered;
-//   }
-  
-//   window.onload = function() {
-//     const checkbox = document.getElementById('toggleBorder');
-//     const img = document.querySelector('.image img');
-  
-//     if (localStorage.getItem("border") === 'bordered') {
-//       img.classList.add('active');
-//       checkbox.checked = true;
-//     } else {
-//       img.classList.remove('active');
-//       checkbox.checked = false;
-//     }
-//   }  
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.getElementById('toggleBorder');
+    const img = document.querySelector('.image.anya img');
+    
+    if (img) {
+        if (localStorage.getItem("border") === 'bordered') {
+            img.classList.add('active');
+            checkbox.checked = true;
+            console.log('checked: True')
+        } else {
+            img.classList.remove('active');
+            checkbox.checked = false;
+            console.log('checked: False')
+        }
+        checkbox.addEventListener('change', changeBorder);
+        console.log('Event listener added.');
+    } else {
+        console.log('Image element not found on load.');
+    }
+});
 
 function slideImagOff() {
     img = document.querySelector('.image.anya');
