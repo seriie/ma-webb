@@ -178,33 +178,59 @@ function closeNav() {
     document.querySelector(".sidenav").style.height = "0";
     document.querySelector(".main-content").style.marginLeft = "0";
 }
-  
-  function changeBorder() {
+
+function changeBorder() {
     const checkbox = document.getElementById('toggleBorder');
-    const img = document.querySelector('.image img');
+    const  img = document.querySelector('.image.anya img');
     const isBordered = img.classList.toggle('active');
-  
     if (isBordered) {
       localStorage.setItem("border", "bordered");
     } else {
-      localStorage.setItem("border", "notBordered");
+      localStorage.setItem("theme", "notBordered");
     }
-  
+    
     checkbox.checked = isBordered;
   }
   
   window.onload = function() {
     const checkbox = document.getElementById('toggleBorder');
-    const img = document.querySelector('.image img');
-  
-    if (localStorage.getItem("border") === 'bordered') {
+    const img = document.querySelector('.image.anya img');
+    
+    if (localStorage.getItem("border") === 'bordered' || (!('border' in localStorage))) {
       img.classList.add('active');
       checkbox.checked = true;
     } else {
       img.classList.remove('active');
       checkbox.checked = false;
     }
-  }  
+  }
+  
+//   function changeBorder() {
+//     const checkbox = document.getElementById('toggleBorder');
+//     const img = document.querySelector('.image img');
+//     const isBordered = img.classList.toggle('active');
+  
+//     if (isBordered) {
+//       localStorage.setItem("border", "bordered");
+//     } else {
+//       localStorage.setItem("border", "notBordered");
+//     }
+  
+//     checkbox.checked = isBordered;
+//   }
+  
+//   window.onload = function() {
+//     const checkbox = document.getElementById('toggleBorder');
+//     const img = document.querySelector('.image img');
+  
+//     if (localStorage.getItem("border") === 'bordered') {
+//       img.classList.add('active');
+//       checkbox.checked = true;
+//     } else {
+//       img.classList.remove('active');
+//       checkbox.checked = false;
+//     }
+//   }  
 
 function slideImagOff() {
     img = document.querySelector('.image.anya');
