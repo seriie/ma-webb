@@ -282,6 +282,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(imageUrl, '_blank');
     });
 
+    // Eventlistener untuk tooltip
+    const viewAnya = document.querySelector('.anyaTooltip .option .viewAnya');
+    
+    viewAnya.addEventListener('click', function() {
+        var currentIndex = images.indexOf(img.src);
+        var imageUrl = images[currentIndex];
+        window.open(imageUrl, '_blank');
+    });
+
     document.addEventListener('contextmenu', function(e) {
         if(e.target.classList.contains('img')) {
             e.preventDefault()

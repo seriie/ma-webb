@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="css/notification.css">
     <link rel="stylesheet" href="css/showProject.css">
     <link rel="stylesheet" href="css/cursorCustom.css">
+    <link rel="stylesheet" href="css/toolTip.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
     <script src="script/script.js"></script>
     <script src="script/cursorCustom.js"></script>
     <script src="script/theme.js"></script>
+    <script src="script/toolTip.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="icon" href="https://th.bing.com/th/id/OIP.4EnD1Qk1PdvPePPhDJxKCgAAAA?pid=ImgDet&w=181&h=181&c=7" type="image/x-icon">
     <title>Mohammad Zidane Rahadian</title>
@@ -134,6 +136,14 @@
 
 <div class="overlay" id="overlay"></div>
 
+<div class="anyaTooltip">
+    <div class="textAnya">Anya Forger</div>
+    <div class="option">
+        <div class="viewAnya text">View Image</div>
+        <div class="aboutAnya text">About Anya</div>
+    </div>
+</div>
+
 <body>
     <div class="main">
         <div class="jumbotron">
@@ -147,7 +157,7 @@
                     <a href="https://wa.me/+6285156346349"><button class="bn632-hover bn26">Hubungi</button></a>
                 </div>
                 <div class="image anya" id="anya">
-                    <img class="img" title="Anya Forger" scr="" alt="" srcset="">
+                    <img class="img anyaForger" data-tooltip="Anya Forger" scr="" alt="" srcset="">
                     <div class="elements">
                         <h3>Ubah Border:</h3>
                         <div class="slideRadioImg">
