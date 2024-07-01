@@ -9,25 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Menentukan posisi tooltip mengikuti kursor
         anyaTooltip.style.top = `${event.pageY}px`;
         anyaTooltip.style.left = `${event.pageX}px`;
-        anyaTooltip.style.visibility = 'visible';
+        anyaTooltip.style.display = 'block';
     });
 
     // Menjaga tooltip tetap terlihat ketika kursor berada di atas tooltip
     anyaTooltip.addEventListener('mouseenter', () => {
-        anyaTooltip.style.visibility = 'visible';
+        anyaTooltip.style.display = 'block';
     });
 
-    // Menyembunyikan tooltip saat kursor meninggalkan gambar atau tooltip
+    // Menyembunyikan tooltip saat kursor meninggalkan gambar
     anyaImg.addEventListener('mouseleave', () => {
         setTimeout(() => {
             if (!anyaTooltip.matches(':hover')) {
-                anyaTooltip.style.visibility = 'hidden';
+                anyaTooltip.style.display = 'none';
             }
         }, 100);
     });
 
     anyaTooltip.addEventListener('mouseleave', () => {
-        anyaTooltip.style.visibility = 'hidden';
+        anyaTooltip.style.display = 'none';
     });
 
     const aboutAnya = document.querySelector('.anyaTooltip .option .aboutAnya');
