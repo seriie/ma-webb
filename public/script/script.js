@@ -555,3 +555,22 @@ document.addEventListener("scroll", function() {
         connect.style.opacity = "1";
     }
 });
+
+// Perubahan header ketika di scroll
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+
+    function handleScroll() {
+        if (window.scrollY > 20) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+    }
+
+    document.addEventListener('scroll', handleScroll);
+
+    // Memeriksa di awal jika halaman sudah di scroll
+    handleScroll();
+});
