@@ -343,10 +343,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showLoading() {
     document.getElementById("loadingContainer").style.display = "flex";
+    document.body.classList.add('modal-open');
 }
 
 function hideLoading() {
     document.getElementById("loadingContainer").style.display = "none";
+    document.body.classList.remove('modal-open');
 }
 
 function simulateTimeConsumingAction() {
@@ -573,4 +575,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Memeriksa di awal jika halaman sudah di scroll
     handleScroll();
+});
+
+document.addEventListener('scroll', function() {
+    const line = document.querySelector('.top-line');
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const widthPercent = (scrollPosition / scrollHeight) * 100;
+    line.style.width = widthPercent + '%';
 });

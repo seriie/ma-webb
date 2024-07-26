@@ -3,3 +3,23 @@
 Name: zidan
 Email: zidannaxserpat@gmail.com
 Message: gg
+
+Name: admin
+Email: admin@gmail.com
+Message: helo
+
+Name: admin
+Email: admin@gmail.com
+Message: helo
+
+Name: admin
+Email: admin@gmail.com
+Message: helo
+
+Name: admin
+Email: admin@gmail.com
+Message: 12
+
+Name: admin
+Email: admin@gmail.com
+Message: wqe

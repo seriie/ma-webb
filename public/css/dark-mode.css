@@ -11,6 +11,10 @@
     color: #fff;
 }
 
+.dark-mode .top-line {
+    background-color: rgb(0, 255, 179);
+}
+
 .dark-mode header.active {
     box-shadow: 0 0 10px 2px white;
 }

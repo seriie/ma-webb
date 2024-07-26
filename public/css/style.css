@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #F8FAFC;
     margin: 0 10px;
     padding: 0;
 }
@@ -27,6 +27,15 @@ header {
     background-color: #33333300;
     color: #fff;
     padding: 10px 10px 0 10px;
+}
+
+header .top-line {
+    height: 3px;
+    background-color: rgb(0, 187, 187);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease;
 }
 
 header.active {
