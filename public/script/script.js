@@ -131,10 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
         teslaWebClone.style.opacity = "1";
     });
     
-    toDoList.addEventListener('click', function() {
-        window.open('https://seriie.github.io/ToDoList');
-    });
-
     teslaWebClone.addEventListener('mouseover', function() {
         toDoList.style.opacity = ".5";
         teslaWebClone.style.transform = "scale(1.1)";
@@ -147,10 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toDoList.style.opacity = "1";
     });
     
-    teslaWebClone.addEventListener('click', function() {
-        window.open('https://seriie.github.io/TeslaWebClone');
-    });
-
     function checkWindowSize() {
         const showProject = document.querySelector('.showMoreProject');
         downAngle.addEventListener('click', function() {
