@@ -10,12 +10,6 @@
     visibility: hidden;
 }
 
-/* .notification.active {
-    backdrop-filter: blur(20px);
-    visibility: visible;
-} */
-
-/* Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -26,10 +20,9 @@
     display: none;
 }
 
-/* Notification active state */
 .notification.active {
     display: block;
-    z-index: 1001; /* Ensure it is above the overlay */
+    z-index: 1001;
 }
 
 body.modal-open {
