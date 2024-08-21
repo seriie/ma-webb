@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/', (req, res) => {
+app.post('/submit', (req, res) => {
   const { Name, Email, Text } = req.body;
 
   // Baca data yang sudah ada di data.json
@@ -52,7 +52,7 @@ app.post('/', (req, res) => {
       }
 
       console.log('Data has been saved to data.json');
-      res.sendFile(path.join(__dirname, '/index.html'));
+      res.send('Form submitted successfully!');
     });
   });
 });
