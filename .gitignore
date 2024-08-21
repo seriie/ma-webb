@@ -1,4 +1,4 @@
-# node_modules/
-*.swp
-*.swo
+node_modules/
+# *.swp
+# *.swo
 output.txt
