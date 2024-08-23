@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/first-project/src/style/not_found.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>zee - page not found</title>
+</head>
+<body>
+    <style>body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #1E293B;
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .notFound {
+        display: flex;
+        position: absolute;
+        height: 500px;
+        font-size: 150px;
+        gap: 100px;
+        top: -20px;
+        align-items: center;
+    }
+    
+    .notFound h1 {
+        margin: 0;
+        color: #E2E8F0;
+        text-shadow: 5px 5px 1px #64748B;
+    }
+    
+    .blackhole {
+        top: 250px;
+        margin: auto;
+        transform: rotateZ(120deg);
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 50px 20px #EA580C;
+        border-radius: 100px;
+        animation: rotate 150s linear infinite;
+    }
+    
+    .blackhole:hover {
+        animation-play-state: paused;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+    
+    .blackholeInner {
+        background-color: #020617;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        
+    }
+    
+    /* .blackholeInnerBorder {
+        position: absolute;
+        border-bottom: 10px solid #f8fafc6e;
+        width: 92px;
+        height: 88px;
+        margin: auto;
+        inset: 0;
+        border-radius: 42px;
+    } */
+    
+    .star {
+        position: relative;
+        border-radius: 100px;
+        background-color: white;
+    }
+    
+    .star .star1,
+    .star .star2,
+    .star .star3,
+    .star .star4,
+    .star .star5,
+    .star .star6,
+    .star .star7,
+    .star .star8,
+    .star .star9,
+    .star .star10,
+    .star .star11,
+    .star .star12,
+    .star .star13,
+    .star .star14,
+    .star .star15,
+    .star .star16,
+    .star .star17,
+    .star .star18,
+    .star .star19,
+    .star .star20,
+    .star .star21,
+    .star .star22,
+    .star .star23,
+    .star .star24,
+    .star .star25 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        z-index: 1000;
+        background-color: #F8FAFC;
+        border-radius: 100px;
+        box-shadow: 0 0 3px 1px #F8FAFC;
+    }
+    
+    .star .star1 {
+        top: -20px;
+        left: 65px;
+    }
+    
+    .star .star2 {
+        top: 100px;
+        left: 100px;
+    }
+    
+    .star .star3 {
+        top: 50px;
+        left: -40px;
+    }
+    
+    .star .star4 {
+        bottom: 20px;
+        left: 40px;
+    }
+    
+    .star .star5 {
+        top: 100px;
+        right: 80px;
+    }
+    
+    .star .star6 {
+        top: 70px;
+        right: -40px;
+    }
+    
+    .star .star7 {
+        bottom: 20px;
+        right: 110px;
+    }
+    
+    .star .star8 {
+        top: 120px;
+        right: 40px;
+    }
+    
+    .star .star9 {
+        top: 20px;
+        left: 130px;
+    }
+    
+    .star .star10 {
+        bottom: 10px;
+        left: 100px;
+    }
+    
+    .star .star11 {
+        top: 130px;
+    
+    }
+    
+    .star .star12 {
+        top: 100px;
+        right: 120px;
+    }
+    
+    .star .star13 {
+        top: -10px;
+        left: 140px;
+    }
+    
+    .star .star14 {
+        top: 150px;
+        left: 30px;
+    }
+    
+    .star .star15 {
+        top: 130px;
+        left: 100px;
+    }
+    
+    .star .star16 {
+        top: 100px;
+        left: 140px;
+    }
+    
+    .star .star17 {
+        top: 10px;
+        left: -30px;
+    }
+    
+    .star .star18 {
+        top: -20px;
+        left: 10px;
+    }
+    
+    .star .star19 {
+        top: 50px;
+        right: -60px;
+    }
+    
+    .star .star20 {
+        top: 150px;
+        left: 60px;
+    }
+    
+    .star .star21 {
+        top: -50px;
+        left: 60px;
+    }
+    
+    .star .star22 {
+        top: -50px;
+        left: 90px;
+    }
+    
+    .star .star23 {
+        top: 70px;
+        left: -40px;
+    }
+    
+    .star .star24 {
+        top: 30px;
+        left: -50px;
+    }
+    .star .star25 {
+        top: 80px;
+        left: -60px;
+    }
+    
+    .bottom {
+        justify-content: center;
+        margin-top: 400px;
+        color: #E0F2FE;
+    }
+    
+    .bottom button {
+        justify-content: center;
+        margin: auto;
+        color: #E0F2FE;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 8px 12px;
+        width: 120px;
+        font-size: 20px;
+        display: inline;
+        position: absolute;
+        right: 0;
+        border-bottom: 3px solid #475569;
+        left: 0;
+    }
+    
+    .bottom button:focus {
+        outline: none;
+    }
+    
+    .bottom button::before {
+        content: "";
+        inset: 0;
+        margin-top: 40px;
+        left: 50%;
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background-color: #F8FAFC;
+    }
+    
+    @keyframes slideBorder {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            left: 0;
+            width: 100%;
+        }
+    }
+    
+    .bottom button:hover::before {
+        animation: slideBorder .3s forwards;
+    }
+    
+    .bottom button:not(:hover)::before {
+        animation: slideOut .3s ease;
+    }
+    
+    @keyframes slideOut {
+        0% {
+            left: 0;
+            width: 100%;
+        }
+    
+        100% {
+            width: 0;
+        }
+    }</style>
+    <div class="notFound">
+        <h1>4</h1>
+        <div class="blackhole">
+            <div class="blackholeInner">
+                <div class="star">
+                    <div class="star1"></div>
+                    <div class="star2"></div>
+                    <div class="star3"></div>
+                    <div class="star4"></div>
+                    <div class="star5"></div>
+                    <div class="star6"></div>
+                    <div class="star7"></div>
+                    <div class="star8"></div>
+                    <div class="star9"></div>
+                    <div class="star10"></div>
+                    <div class="star11"></div>
+                    <div class="star12"></div>
+                    <div class="star13"></div>
+                    <div class="star14"></div>
+                    <div class="star15"></div>
+                    <div class="star16"></div>
+                    <div class="star17"></div>
+                    <div class="star18"></div>
+                    <div class="star19"></div>
+                    <div class="star20"></div>
+                    <div class="star21"></div>
+                    <div class="star22"></div>
+                    <div class="star23"></div>
+                    <div class="star24"></div>
+                    <div class="star25"></div>
+                </div>
+                <div class="blackholeInnerBorder"></div>
+            </div>
+        </div>
+        <h1>4</h1>
+    </div>
+    <div class="bottom">
+        <h1>PAGE NOT FOUND</h1>
+        <a href="/">
+            <button>Go Back</button>
+        </a>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
