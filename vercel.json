@@ -9,13 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js",
-      "headers": {
-        "cache-control": "no-cache"
-      }
+      "dest": "server.js"
     }
-  ],
-  "env": {
-    "PORT": "3000"
-  }
+  ]
 }
