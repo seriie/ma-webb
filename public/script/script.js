@@ -105,7 +105,6 @@ startTimer(); // Mulai timer ketika halaman dimuat
 
 // Show project
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const downAngle = document.querySelector('.downAngle');
     const showProject = document.querySelector('.showMoreProject');
@@ -152,8 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-
 
 // Open nav
 
