@@ -59,6 +59,6 @@ app.get("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'public', 'not_found.html'));
 });
 
-app.listen(config.PORT, () => {
-  console.log(`Server running at ${config.PROTOCOL}${config.DOMAIN}${config.PORT}`);
+app.listen(9000, () => {
+  console.log(`Server running at http://localhost:9000`);
 });
