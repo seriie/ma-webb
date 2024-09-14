@@ -1,5 +1,4 @@
 output.txt
 node_modules/
 .vscode/
-.env
 *.exe
