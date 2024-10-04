@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.post('/', (req, res) => {
@@ -49,7 +49,7 @@ app.post('/', (req, res) => {
       }
 
       console.log('Data has been saved to data.json');
-      res.sendFile(path.join(__dirname, 'index.html'));
+      res.sendFile(path.join(__dirname, '/index.html'));
       console.log('Saved data:', newEntry);
     });
   });
@@ -59,6 +59,8 @@ app.get("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'public', 'not_found.html'));
 });
 
-app.listen(9000, () => {
-  console.log(`Server running at http://localhost:9000`);
-});
+// app.listen(config.PORT || 9001, () => {
+//   console.log(`Server running at http://localhost:9000`);
+// });
+
+module.export = app;

@@ -6,6 +6,10 @@
     transition: all .4s;
 }
 
+*::selection {
+    background-color: transparent;
+}
+
 .sidenav {
     display: none;
 }
@@ -27,6 +31,10 @@ header {
     background-color: #33333300;
     color: #fff;
     padding: 10px 10px 0 10px;
+}
+
+header nav ul li a {
+    cursor: pointer;
 }
 
 header .top-line {
