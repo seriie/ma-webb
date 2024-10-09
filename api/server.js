@@ -63,4 +63,4 @@ app.get("*", (req, res) => {
 //   console.log(`Server running at http://localhost:9000`);
 // });
 
-module.export = app;
+module.exports = app;
