@@ -4,13 +4,13 @@
     "express": "^4.19.2"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node api/server.js",
     "build": "echo 'No build step defined'"
   },
   "name": "nodejs-portofolio-main",
   "version": "1.0.0",
   "description": "nodejs portofolio",
-  "main": "server.js",
+  "main": "api/server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seriie/nodejs-portofolio.git"
